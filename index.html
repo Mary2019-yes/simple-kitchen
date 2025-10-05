@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simplifyd Home — Contact & Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">SH</div>
+        <div class="brand-text">
+          <strong class="brand-name">Simplifyd Home</strong>
+          <div class="brand-tag">Kitchen & Electronics</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="search" placeholder="Search products, e.g. blender, air fryer..." />
+        <button id="searchBtn" class="btn btn-ghost">Search</button>
+      </div>
+
+      <div class="actions">
+        <!-- WhatsApp quick link (user-initiated) -->
+        <a id="waLink" href="https://wa.me/254743039253?text=Hi%20Mary%2C%20I%20want%20to%20inquire" target="_blank" rel="noopener noreferrer">
+          <button class="btn btn-outline">Message on WhatsApp</button>
+        </a>
+
+        <div class="cart-btn">
+          <button id="openCart" class="btn btn-primary">Cart</button>
+          <div id="cartCount" class="cart-count" aria-hidden="true">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- hero + product grid would go here (omitted for brevity) -->
+    <section class="contact-card">
+      <div class="contact-left">
+        <h2>Contact & Feedback</h2>
+        <p class="muted">Send us a message — we'll reply on WhatsApp and confirm by email.</p>
+
+        <form id="contactForm">
+          <label>
+            Your name
+            <input type="text" name="name" id="name" placeholder="Jane Doe" required>
+          </label>
+
+          <label>
+            Your email
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
+          </label>
+
+          <label>
+            Your phone (optional)
+            <input type="tel" name="phone" id="phone" placeholder="07XXXXXXXX">
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" id="message" rows="5" placeholder="How can we help?" required></textarea>
+          </label>
+
+          <div class="form-row">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="button" id="waQuick" class="btn btn-outline">Message on WhatsApp</button>
+          </div>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="contact-right">
+        <div class="info-card">
+          <h4>Quick contact</h4>
+          <p class="muted">WhatsApp: +254743039253</p>
+          <p class="muted">Email: hello@simplifyd.co.ke</p>
+          <div class="small-cta">
+            <a href="https://wa.me/254743039253?text=Hi%20Mary%2C%20I%20saw%20your%20site" target="_blank" rel="noopener noreferrer" class="btn btn-cta">Start WhatsApp Chat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
